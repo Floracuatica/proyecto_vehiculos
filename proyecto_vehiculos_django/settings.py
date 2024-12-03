@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'clave-por-defecto')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Allowed hosts for production and local development
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost,proyecto-vehiculos.onrender.com').split(',')
 
 # Application definition
 INSTALLED_APPS = [
