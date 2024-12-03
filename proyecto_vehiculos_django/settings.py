@@ -96,6 +96,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Añade esta configuración para servir estáticos en el administrador
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
