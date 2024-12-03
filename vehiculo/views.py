@@ -5,7 +5,7 @@ from .models import Vehiculo
 from django.contrib.auth.decorators import login_required, permission_required
 
 def index(request):
-    return HttpResponse("<h1>Bienvenido al catálogo de vehículos</h1>")
+    return render(request, 'index.html')  # Cambiamos el HttpResponse por el archivo HTML
 
 def agregar_vehiculo(request):
     if request.method == 'POST':

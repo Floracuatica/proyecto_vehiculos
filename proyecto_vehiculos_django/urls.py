@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from vehiculo import views  # Importamos la vista index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add/', include('vehiculo.urls')),  # Asegúrate de incluir las URLs de tu app
-    path('list/', include('vehiculo.urls')),
+    path('', views.index, name='index'),  # Página de inicio
+    path('', include('vehiculo.urls')),  # Incluye las rutas de la app vehiculo sin prefijo adicional
 ]
