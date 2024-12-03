@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'clave-secreta-por-defecto')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  # Agrega aquí los dominios o IPs permitidos
 
 
 # Application definition
@@ -116,7 +116,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+# URL para archivos estáticos
 STATIC_URL = '/static/'
+
+# Ruta donde se recolectarán los archivos estáticos
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Default primary key field type
