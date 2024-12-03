@@ -24,7 +24,8 @@ class Vehiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.modelo}"
-class Meta:
-    permissions = [
-        ("visualizar_catalogo", "Puede visualizar el catálogo de vehículos"),
-    ]
+
+    class Meta:  # Mueve la clase Meta dentro de Vehiculo
+        permissions = [
+            ("visualizar_catalogo", "Puede visualizar el catálogo de vehículos"),
+        ]
