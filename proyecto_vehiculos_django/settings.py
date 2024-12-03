@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'clave-por-defecto')
 
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
@@ -86,17 +86,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-
-# Para producción, Render o Heroku recogerá los archivos estáticos aquí
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# Añade esta configuración para servir estáticos en el administrador
-STATICFILES_DIRS = [BASE_DIR / 'static']
-
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
@@ -104,3 +93,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login URL for Django admin
 LOGIN_URL = '/admin/login/'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Si tienes una carpeta 'static' en tu proyecto
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Esta es la carpeta donde Heroku recogerá los archivos estáticos
