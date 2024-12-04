@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', '123456')
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = ['proyectovehiculos-a1790bd1e6af.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['proyectovehiculos-a1790bd1e6af.herokuapp.com', '127.0.0.1', 'localhost', 'tudominio.com']
 
 
 # Application definition
