@@ -8,7 +8,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'clave-por-defecto')
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['proyectovehiculos-a1790bd1e6af.herokuapp.com', '127.0.0.1', 'localhost']
+
 
 # Application definition
 INSTALLED_APPS = [
