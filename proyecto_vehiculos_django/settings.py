@@ -78,6 +78,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Si usas el modelo predeterminado de usuario de Django
+AUTH_USER_MODEL = 'auth.User'
+
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
