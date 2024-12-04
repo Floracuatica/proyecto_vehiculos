@@ -87,9 +87,17 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Archivos estáticos
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Esta es la carpeta donde Heroku recogerá los archivos estáticos
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Sirve archivos estáticos en Heroku
+
+# Carpeta donde Heroku almacenará los archivos estáticos recolectados
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Si tienes archivos estáticos adicionales en la raíz del proyecto, usa STATICFILES_DIRS
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Whitenoise para servir los archivos estáticos en Heroku
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
